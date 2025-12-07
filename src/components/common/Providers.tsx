@@ -14,9 +14,14 @@ export function Providers({ children }: ProvidersProps) {
     try {
       const stored = localStorage.getItem("finboard-theme");
       if (stored === "dark") {
+        document.documentElement.classList.remove("light");
         document.documentElement.classList.add("dark");
       } else if (stored === "light") {
         document.documentElement.classList.remove("dark");
+        document.documentElement.classList.add("light");
+      } else {
+        // Default to dark if no preference stored
+        document.documentElement.classList.add("dark");
       }
     } catch (e) {
       // ignore (server environments)

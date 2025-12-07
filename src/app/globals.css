@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Professional Finance Dashboard Theme */
-  /* Light theme (default) */
+  /* Default Light Theme */
   --background: #ffffff;
   --foreground: #0f172a;
   --background-color: #f8fafc;
@@ -14,7 +13,7 @@
   --border-color: #e2e8f0;
   --border-subtle: #f1f5f9;
 
-  /* Brand Colors - Refined Palette */
+  /* Brand Colors */
   --primary: #10b981;
   --primary-dark: #059669;
   --primary-light: #d1fae5;
@@ -31,33 +30,36 @@
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Fallback for system preference if class not set */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
-    --background-color: #0f172a;
-    --surface-color: #1e293b;
-    --surface-secondary: #0f172a;
-    --text-color: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
-    --border-color: #334155;
-    --border-subtle: #1e293b;
+/* Light theme - explicit class */
+html.light,
+html:not(.dark) {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --background-color: #f8fafc;
+  --surface-color: #ffffff;
+  --surface-secondary: #f1f5f9;
+  --text-color: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --border-color: #e2e8f0;
+  --border-subtle: #f1f5f9;
 
-    --primary: #10b981;
-    --primary-dark: #059669;
-    --primary-light: #064e3b;
-    --secondary: #3b82f6;
-    --accent: #f59e0b;
-    --danger: #ef4444;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --info: #3b82f6;
-  }
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --primary-light: #d1fae5;
+  --secondary: #6366f1;
+  --accent: #f59e0b;
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Dark theme - applies when html has dark class (from next-themes) */
+/* Dark theme - applies when html has dark class */
 html.dark {
   --background: #0a0f1a;
   --foreground: #f1f5f9;

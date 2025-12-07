@@ -105,10 +105,22 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
   const handleToggleTheme = () => {
     // Toggle html class directly and persist choice so CSS variables respond immediately
     try {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("finboard-theme", isDark ? "dark" : "light");
-      // Also inform next-themes if available
-      if (setTheme) setTheme(isDark ? "dark" : "light");
+      const htmlEl = document.documentElement;
+      const currentlyDark = htmlEl.classList.contains("dark");
+
+      if (currentlyDark) {
+        // Switch to light
+        htmlEl.classList.remove("dark");
+        htmlEl.classList.add("light");
+        localStorage.setItem("finboard-theme", "light");
+        if (setTheme) setTheme("light");
+      } else {
+        // Switch to dark
+        htmlEl.classList.remove("light");
+        htmlEl.classList.add("dark");
+        localStorage.setItem("finboard-theme", "dark");
+        if (setTheme) setTheme("dark");
+      }
     } catch (e) {
       // ignore in SSR
       if (setTheme) setTheme(theme === "light" ? "dark" : "light");

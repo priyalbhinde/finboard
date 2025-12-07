@@ -1,11 +1,11 @@
 .container {
-  background: var(--surface-color, #1e1e1e);
-  border: 1px solid var(--border-color, #333333);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 16px;
   height: 100%;
   overflow: auto;
-  color: var(--text-color, #ffffff);
+  color: var(--text-color);
 }
 
 .title {
@@ -15,8 +15,8 @@
 }
 
 .card {
-  background: var(--background-color, #121212);
-  border: 1px solid var(--border-color, #333333);
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 12px;
   margin-bottom: 12px;
@@ -38,7 +38,7 @@
 .price {
   font-size: 18px;
   font-weight: 700;
-  color: #2196f3;
+  color: var(--info);
 }
 
 .info {
@@ -54,7 +54,7 @@
 }
 
 .label {
-  color: var(--text-secondary, #aaaaaa);
+  color: var(--text-secondary);
 }
 
 .value {
@@ -62,11 +62,11 @@
 }
 
 .positive {
-  color: #4caf50 !important;
+  color: #10b981 !important;
 }
 
 .negative {
-  color: #f44336 !important;
+  color: #ef4444 !important;
 }
 
 .loading,
@@ -79,9 +79,9 @@
 }
 
 .error {
-  color: #f44336;
+  color: #ef4444;
 }
 
 .loading {
-  color: var(--text-secondary, #aaaaaa);
+  color: var(--text-secondary);
 }
