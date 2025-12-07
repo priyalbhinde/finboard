@@ -1,0 +1,93 @@
+.container {
+  background: var(--surface-color, #1e1e1e);
+  border: 1px solid var(--border-color, #333333);
+  border-radius: 8px;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color, #ffffff);
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.controls {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px 12px;
+  background: var(--background-color, #121212);
+  border: 1px solid var(--border-color, #333333);
+  color: var(--text-color, #ffffff);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.searchInput::placeholder {
+  color: var(--text-secondary, #aaaaaa);
+}
+
+.tableWrapper {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid var(--border-color, #333333);
+  border-radius: 4px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  background: var(--background-color, #121212);
+  border-bottom: 2px solid var(--border-color, #333333);
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary, #aaaaaa);
+}
+
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color, #333333);
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.positive {
+  color: #4caf50;
+}
+
+.negative {
+  color: #f44336;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--text-secondary, #aaaaaa);
+  font-size: 14px;
+}

@@ -1,0 +1,105 @@
+{
+  "finboard_dashboard": {
+    "id": "dashboard_sample_001",
+    "name": "My Financial Dashboard",
+    "description": "Track your favorite stocks and market data",
+    "widgets": [
+      {
+        "id": "widget_001",
+        "type": "stock-card",
+        "title": "Apple Inc. (AAPL)",
+        "position": { "x": 0, "y": 0 },
+        "size": { "width": 400, "height": 400 },
+        "config": {
+          "apiEndpoint": "https://www.alphavantage.co/query",
+          "refreshInterval": 60000,
+          "selectedFields": ["price", "change", "volume"],
+          "filters": { "symbol": "AAPL" },
+          "format": { "price": "currency", "change": "percentage" },
+          "pageSize": 20,
+          "currentPage": 1,
+          "sortBy": "symbol",
+          "sortOrder": "asc",
+          "chartInterval": "daily",
+          "timeRange": 30
+        },
+        "lastUpdated": 0
+      },
+      {
+        "id": "widget_002",
+        "type": "stock-card",
+        "title": "Google LLC (GOOGL)",
+        "position": { "x": 1, "y": 0 },
+        "size": { "width": 400, "height": 400 },
+        "config": {
+          "apiEndpoint": "https://www.alphavantage.co/query",
+          "refreshInterval": 60000,
+          "selectedFields": ["price", "change", "volume"],
+          "filters": { "symbol": "GOOGL" },
+          "format": { "price": "currency", "change": "percentage" },
+          "pageSize": 20,
+          "currentPage": 1,
+          "sortBy": "symbol",
+          "sortOrder": "asc",
+          "chartInterval": "daily",
+          "timeRange": 30
+        },
+        "lastUpdated": 0
+      },
+      {
+        "id": "widget_003",
+        "type": "line-chart",
+        "title": "AAPL 30-Day Chart",
+        "position": { "x": 0, "y": 1 },
+        "size": { "width": 800, "height": 400 },
+        "config": {
+          "apiEndpoint": "https://www.alphavantage.co/query",
+          "refreshInterval": 300000,
+          "selectedFields": ["time", "open", "close"],
+          "filters": { "symbol": "AAPL" },
+          "format": { "close": "currency" },
+          "pageSize": 100,
+          "currentPage": 1,
+          "sortBy": "time",
+          "sortOrder": "asc",
+          "chartInterval": "daily",
+          "timeRange": 30
+        },
+        "lastUpdated": 0
+      },
+      {
+        "id": "widget_004",
+        "type": "stock-table",
+        "title": "Market Overview",
+        "position": { "x": 1, "y": 1 },
+        "size": { "width": 800, "height": 400 },
+        "config": {
+          "apiEndpoint": "https://www.alphavantage.co/query",
+          "refreshInterval": 60000,
+          "selectedFields": ["symbol", "price", "change", "volume"],
+          "filters": {},
+          "format": { "price": "currency", "change": "percentage", "volume": "number" },
+          "pageSize": 20,
+          "currentPage": 1,
+          "sortBy": "changePercent",
+          "sortOrder": "desc",
+          "chartInterval": "daily",
+          "timeRange": 30
+        },
+        "lastUpdated": 0
+      }
+    ],
+    "theme": "dark",
+    "layout": "grid",
+    "createdAt": 1733520000000,
+    "updatedAt": 1733520000000,
+    "isTemplate": false
+  },
+  "finboard_preferences": {
+    "theme": "dark",
+    "autoRefresh": true,
+    "refreshInterval": 60000,
+    "currency": "USD",
+    "notifications": true
+  }
+}
